@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        .box{
+            width: 1130px;
+            margin: 0 auto;
+            border: solid 1px blue;
+        }
+
+        header{
+            height: 150px;
+        }
+        #main{
+            width: 745px;
+            height: 400px;
+            float: left;
+            border: solid 1px red;
+        }
+        aside{
+            width: 340px;
+            height: 400px;
+            float: right;
+            border: solid 1px red;
+        }
+
+        footer{
+            clear: both;
+            height: 150px;
+            border: solid 1px red;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="box">
+            <nav id="logo">
+                로고 & 검색
+            </nav>
+        </div>
+        <div class="box">
+            <nav id="main_menu">
+                메인 메뉴
+            </nav>
+        </div>
+    </header>
+    <section>
+        <div class="box">
+            <div id="main">
+                메인
+            </div>
+            <aside>
+                사이드바
+            </aside>
+        </div>
+    </section>
+    <footer>
+        <div class="box">
+            푸터
+        </div>
+    </footer>
+</body>
+</html>
