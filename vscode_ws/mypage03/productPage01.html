@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        #product_photo{
+            width: 400px;
+            /* border: solid 1px red; */
+        }
+        #product_photo > img{
+            width: 400px;
+            height: 300px;
+            border: solid 1px green;
+        }
+        .top_box{
+            justify-content: center;
+            display: flex;
+
+            /* border: solid 1px yellowgreen; */
+        }
+        #product_info{
+            margin: 30px;
+        }
+        #reply_box{
+            margin-top: 50px;
+            margin-left: 300px;
+        }
+        textarea{
+            width: 500px;
+            height: 100px;
+            border: solid 1px gainsboro;
+        }
+        #reply_list{
+
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="box">
+            <div id="logo_menu_box">
+                <div id="logo_box">
+                    <img id="logo" src="/mypage03/images/onion_logo2.png" onclick="location.href='index.html'">
+                </div>
+                <nav id="main_menu">
+                    <ul id="menu_list">
+                        <li><a href="index.html">홈으로</a></li>
+                        <li><a href="market.html">중고거래</a></li>
+                        <li><a href="board.html">자유게시판</a></li>
+                        <li><a href="login.html">로그인</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div id="searchBar">
+                <form id="frm" name="search_frm" action="#">
+                    <input type="text" name="title">
+                    <input type="submit" value="검색">
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="box">
+            <div class="top_box">
+                <div id="product_photo">
+                    <img src="/mypage03/images/item1.jpeg">
+                </div>
+                <div id="product_info">
+                    <h1>선반</h1>
+                    <div id="price">1,000원</div>
+                    <p>
+                        나눔합니다.<br>
+                        제가 해체를 할줄 몰라서요.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div id="reply_box">
+                <h1>댓글 달기</h1>
+                <form action="#">
+                    <textarea name="content"></textarea>
+                    <input type="hidden" name="id">
+                </form>
+            </div>
+        </div>
+        <div class="box">
+            <div id="reply_list">
+                댓글 목록
+            </div>
+        </div>
+    </section>
+</body>
+</html>

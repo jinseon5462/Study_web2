@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        #board_title_box > h1{
+            text-align: center;
+            margin-top: 30px;
+            padding-bottom: 30px;
+            border-bottom: solid 1px gainsboro;
+
+        }
+        .board_box{
+            /* margin-left: 500px; */
+            border-radius: 10px 10px 10px 10px;
+            border: solid 1px gainsboro;
+        }
+        .board_box > table{
+            text-align: center;
+            width: 500px;
+            height: 500px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="box">
+            <div class="login_status"></div>
+            <div id="logo_menu_box">
+                <div id="logo_box">
+                    <img id="logo" src="/mypage03/images/onion_logo2.png" onclick="location.href='index.html'">
+                </div>
+                <nav id="main_menu">
+                    <ul id="menu_list">
+                        <li><a href="index.html">홈으로</a></li>
+                        <li><a href="market.html">중고거래</a></li>
+                        <li><a href="board.html">자유게시판</a></li>
+                        <li><a href="login.html">로그인</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div id="searchBar">
+                <form id="frm" name="search_frm" action="#">
+                    <input type="text" name="title">
+                    <input type="submit" value="검색">
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="box" id="board_title_box">
+            <h1>자유 게시판</h1>
+        </div>
+        <div class="board_box">
+            <table>
+                <tr>
+                    <th>작성자</th>
+                    <th>제목</th>
+                    <th>내용</th>
+                    <th>작성일</th>
+                </tr>
+                <tr>
+                    <td>ㅋㅋ</td>
+                    <td>ㅋㅋ</td>
+                    <td>ㅋㅋ</td>
+                    <td>ㅋㅋ</td>
+                </tr>
+                <tr>
+                    <td>ㅋㅋ</td>
+                    <td>ㅋㅋ</td>
+                    <td>ㅋㅋ</td>
+                    <td>ㅋㅋ</td>
+                </tr>
+                <tr>
+                    <td>ㅋㅋ</td>
+                    <td>ㅋㅋ</td>
+                    <td>ㅋㅋ</td>
+                    <td>ㅋㅋ</td>
+                </tr>
+                <tr>
+                    <td>ㅋㅋ</td>
+                    <td>ㅋㅋ</td>
+                    <td>ㅋㅋ</td>
+                    <td>ㅋㅋ</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="box">
+            <div class="items">
+                <h3>문의전화</h3>
+                <ul>
+                    <li class="phone">010-2595-5462</li>
+                    <li>09:00 - 18:00(Lunch 13:00 - 14:00)</li>
+                </ul>
+            </div>
+            <div class="items">
+                <h3>Information</h3>
+                <ul>
+                    <li>주소 : 부산광역시 부산진구 대학로</li>
+                    <li>전화 : 010-2595-5462</li>
+                    <li>이메일 : dlwlstjs5462@gmail.com</li>
+                </ul>
+            </div>
+            <!-- <div class="items">
+                <h3>입금정보</h3>
+                <ul>
+                    <li>하나은행 333-910421-90207</li>
+                    <li>이진선</li>
+                </ul>
+            </div> -->
+        </div>
+    </footer>
+</body>
+</html>

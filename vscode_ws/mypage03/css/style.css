@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* text-align: center; */
+    list-style-type: none;
+    font-family: sans-serif;
+    text-decoration: none;
+    border-collapse: collapse;
+}
+.box{
+    width: 1300px;
+    margin: 0 auto;
+}
+a{
+    color: black;
+}
+a:hover{
+    color: rgb(129, 127, 124);
+}
+
+/* 헤더 영역 */
+
+header{
+    height: 140px;
+    line-height: 110px;
+    border-bottom: solid 1px gainsboro;
+}
+header #logo{
+    margin-top: 5px;
+    width: 200px;
+    float: left;
+    background-size: 100% 100%;
+    cursor: pointer;
+}
+#main_menu{
+    float: left;
+}
+#menu_list{
+    display: flex;
+}
+#menu_list > li{
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 20px;
+    padding-right: 20px;
+    margin-left: 40px;
+}
+
+header #searchBar{
+    float: right;
+}
+
+/* 검색바 */
+#frm{
+    padding-top: 12px;
+}
+#frm input[type="text"]{
+    border: 0;
+    background: none;
+    height: 30px;
+    text-align: center;
+    border-radius: 20px;
+    /* color: black; */
+    border: solid 2px rgb(243, 177, 133);
+    outline: none;
+    transition: 0.2s;
+}
+#frm input[type="submit"]{
+    border: 0;
+    width: 50px;
+    height: 30px;
+    background: none;
+    border: solid 2px rgb(243, 177, 133);
+    border-radius: 20px;
+}
+#frm input[type="text"]:focus{
+    border-color: rgb(254, 102, 0);
+}
+#frm input[type="submit"]:hover{
+    background-color: rgb(252, 166, 79);
+}
+
+.login_status{
+    text-align: center;
+}
+
+/* 메인 섹션 */
+section{
+    clear: both;
+    /* background-color: rgb(125, 113, 77); */
+}
+
+section #main_image{
+    float: left;
+    /* border: solid 1px red; */
+}
+section #img2{
+    float: left;
+    width:900px;
+    height: 750px;
+}
+section #main_title{
+    padding-top: 300px;
+    float: right;
+    /* border: solid 1px red; */
+    width: 390px;
+    height: 750px;
+}
+footer{
+    clear: both;
+    padding-top: 20px;
+    height: 130px;
+    /* border: solid 1px red; */
+}
+
+.items{
+    margin-left: 300px;
+    float: left;
+}
+
+/* 중고 게시판 */
+/* section > h2{
+    margin-top: 30px;
+    position: static;
+    margin-left: 50px;
+} */
+.market_section{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.box_section1{
+    /* margin: 30px; */
+    margin-left: 350px;
+    width: 900px;
+    display: flex;
+}
+.box1{
+    display: flex;
+    justify-content: center;
+}
+.box2{
+    display: flex;
+    justify-content: center;
+}
+.item > img{
+    width: 250px;
+    height: 300px;
+    border-radius: 20px 20px 20px 20px;
+}
+.item{
+    width: 290px;
+    padding: 20px;
+    margin-left: 0px;
+    border-bottom: solid 1px gainsboro;
+}
+
+#title{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#price{
+    font-weight: bold;
+    margin-bottom: 10px;
+}
