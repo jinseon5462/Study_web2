@@ -1,0 +1,13 @@
+.section_main{
+    width: 1400px;
+    margin: 0 auto;
+}
+.section_ranking{
+    background-color: rgb(35, 35, 35);
+    width: 1400px;
+    margin: 0 auto;
+}
+.main_video > video{
+    width: 1400px;
+    height: 600px;
+}

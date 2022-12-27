@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/movie_page/css/style.css">
+    <title>Document</title>
+    <style>
+        .reg_box{
+            width: 1400px;
+            height: 800px;
+            padding: 200px 0 0 450px;
+        }
+        .form{
+            width: 500px;
+            padding: 50px;
+            /* position: absolute; */
+            /* top: 50%; */
+            /* left: 50%; */
+            /* transform: translate(-50%, -50%); */
+            background-color: #191919;
+            text-align: center;
+            border-radius: 20px;
+            border: solid 3px black;
+            box-shadow: 10px 10px 10px black;
+        }
+    
+        .form input[type="text"]{
+            border: 0;
+            background: none;
+            display: inline;
+            margin: 20px 0 0 65px;
+            text-align: center;
+            border: solid 2px rgb(92, 139, 123);
+            padding: 5px 0 5px 0;
+            width: 200px;
+            outline: none;
+            color: white;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+        .form input[type="password"]{
+            border: 0;
+            background: none;
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+            border: solid 2px rgb(92, 139, 123);
+            padding: 5px 0 5px 0;
+            width: 200px;
+            outline: none;
+            color: white;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+    
+        .form input[type="text"]:focus,
+        .form input[type="password"]:focus{
+            /* width: 200px; */
+            border-color: rgb(7, 247, 171);
+        }
+        .form > h1{
+            color: white;
+            font-weight: 500px;
+        }
+        .form input[type="submit"],
+        .form input[type="reset"],
+        .form input[type="button"]{
+            border: 0;
+            width: 60px;
+            height: 30px;
+            background: none;
+            color: rgb(195, 190, 190);
+            border: solid 2px rgb(92, 139, 123);
+            border-radius: 20px;
+            transition: 0.30s;
+            cursor: pointer;
+        }
+        .form input[type="submit"]:focus,
+        .form input[type="reset"]:focus{
+            border-color: rgb(7, 247, 171);
+        }
+        .form input[type="submit"]:hover,
+        .form input[type="reset"]:hover,
+        .form input[type="button"]:hover
+        {
+            background-color: rgb(33, 121, 112);
+        }
+    </style>
+</head>
+<body>
+    <div class="colorbox_header">
+        <header>
+            <div class="box">
+                <div id="logo">
+                    <img src="/movie_page/images/cjv_black.PNG" onclick="location.href='index.html'">
+                </div>
+                <nav id="menu">
+                    <ul id="login_menu">
+                        <li>이진선님</li>
+                        <li>&nbsp;|&nbsp;</li>
+                        <li><a href="#">Logout</a></li>
+                    </ul>
+                    <ul id="main_menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="ranking.html">Ranking</a></li>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="signUp.html">Sign Up</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </div>
+    <div class="colorbox_signUp">
+        <section class="section_main">
+            <div class="box">
+                <div class="reg_box">
+                    <form class="form" name="frm" action="reg.do" method="post">
+                        <h1>Sign Up</h1>
+                        <input type="hidden" name="result" value="">
+                        <input type="text" name="id" placeholder="UserID">
+                        <input type="button" value="중복 확인" onclick="idCheck()">
+                        <input type="password" name="pw" placeholder="Password">
+                        <input type="submit" value="회원가입" onclick="return regCheck()">
+                        <input type="reset" value="초기화">
+                    </form>
+                </div>
+        </section>
+        </div>
+    </div>
+
+    <div class="colorbox_footer">
+        <footer>
+            <div class="box">
+                <nav id="bottom_menu">
+                    <ul>
+                        <li>이진선 영화 페이지</li>
+                        <li>개인정보처리방침</li>
+                        <li>저작권 정보</li>
+                        <li>이용 안내</li>
+                    </ul>
+                </nav>
+                <div class="items">
+                    <h3>문의전화</h3>
+                    <ul>
+                        <li class="phone">010-2595-5462</li>
+                        <li>09:00 - 18:00(Lunch 13:00 - 14:00)</li>
+                    </ul>
+                </div>
+                <div class="items">
+                    <h3>Movie</h3>
+                    <ul>
+                        <li>주소 : 부산광역시 부산진구 대학로</li>
+                        <li>전화 : 010-2595-5462</li>
+                        <li>이메일 : dlwlstjs5462@gmail.com</li>
+                    </ul>
+                </div>
+                <div class="items">
+                    <h3>입금정보</h3>
+                    <ul>
+                        <li>하나은행 333-910421-90207</li>
+                        <li>이진선</li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

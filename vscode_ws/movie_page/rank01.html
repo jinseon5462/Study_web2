@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/movie_page/css/style.css">
+    <title>Document</title>
+    <style>
+        .info_box{
+            width: 1400px;
+            display: flex;
+            /* margin: 0px 0 10px 400px; */
+            border-bottom: solid 1px rgb(108, 108, 108);
+            padding: 20px;
+            justify-content: center;
+        }
+        .info_box img{
+            width: 300px;
+        }
+        #rankPage_info > h1{
+            margin-top: 40px;
+        }
+        #rankPage_image{
+            width: 350px;
+        }
+        #rankPage_info{
+            width: 800px;
+        }
+        .regReply_box{
+            margin: 0 auto;
+            width: 1400px;
+            /* border: solid 1px red; */
+        }
+        .rankPage_section1{
+            width: 1400px;
+            margin: 0 auto;
+        }
+        form input[type="submit"],
+        form input[type="reset"]
+        {
+            color: black;
+        }
+        form textarea{
+            background: white;
+            color: black;
+            width: 400px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="colorbox_header">
+        <header>
+            <div class="box">
+                <div id="logo">
+                    <img src="/movie_page/images/cjv_black.PNG" onclick="location.href='index.html'">
+                </div>
+                <nav id="menu">
+                    <ul id="login_menu">
+                        <li>이진선님</li>
+                        <li>&nbsp;|&nbsp;</li>
+                        <li><a href="#">Logout</a></li>
+                    </ul>
+                    <ul id="main_menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="ranking.html">Ranking</a></li>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="signUp.html">Sign Up</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </div>
+    <div class="colorbox_infoPage">
+        <section class="rankPage_section1">
+            <div class="box">
+                <div class="info_box">
+                    <div id="rankPage_image">
+                        <img src="/movie_page/images/p1.jpeg">
+                    </div>
+                    <div id="rankPage_info">
+                        <h1>아바타 : 물의길</h1>
+                        <br>
+                        개봉&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2022.12.14<br>
+                        장르&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;액션/어드벤처/SF/스릴러<br>
+                        국가&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;미국<br>
+                        등급&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12세이상관람가<br>
+                        별점&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⭐️&nbsp;7.9<br>
+                        러닝타임&nbsp;&nbsp;192분<br><br>
+
+                        아바타: 물의 길은 판도라 행성에서<br>
+                        '제이크 설리'와 '네이티리'가 이룬 가족이 겪게 되는 무자비한 위협과<br>
+                        살아남기 위해 떠나야 하는 긴 여정과 전투,<br>
+                        그리고 견뎌내야 할 상처에 대한 이야기를 그렸다.<br>
+                        <br>
+                        월드와이드 역대 흥행 순위 1위를 기록한 전편 아바타에 이어<br>
+                        제임스 카메론 감독이 13년만에 선보이는 영화로,<br>
+                        샘 워싱턴, 조 샐다나, 시고니 위버, 스티븐 랭, 케이트 윈슬렛이 출연하고<br>
+                        존 랜도가 프로듀싱을 맡았다.<br>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="rankPage_section2">
+            <div class="box">
+                <div class="regReply_box">
+                    <h1>네티즌 리뷰</h1>
+                    <form action="#">
+                        <input type="hidden" value="'${sessionScope.id}'">
+                        <textarea></textarea>
+                        <input type="submit" value="등록">
+                        <input type="reset" value="지우기">
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="colorbox_footer">
+        <footer>
+            <div class="box">
+                <nav id="bottom_menu">
+                    <ul>
+                        <li>이진선 영화 페이지</li>
+                        <li>개인정보처리방침</li>
+                        <li>저작권 정보</li>
+                        <li>이용 안내</li>
+                    </ul>
+                </nav>
+                <div class="items">
+                    <h3>문의전화</h3>
+                    <ul>
+                        <li class="phone">010-2595-5462</li>
+                        <li>09:00 - 18:00(Lunch 13:00 - 14:00)</li>
+                    </ul>
+                </div>
+                <div class="items">
+                    <h3>Movie</h3>
+                    <ul>
+                        <li>주소 : 부산광역시 부산진구 대학로</li>
+                        <li>전화 : 010-2595-5462</li>
+                        <li>이메일 : dlwlstjs5462@gmail.com</li>
+                    </ul>
+                </div>
+                <div class="items">
+                    <h3>입금정보</h3>
+                    <ul>
+                        <li>하나은행 333-910421-90207</li>
+                        <li>이진선</li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

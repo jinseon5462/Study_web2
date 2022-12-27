@@ -1,0 +1,52 @@
+/* 헤더 */
+
+header{
+    margin: 0 auto;
+    width: 1400px;
+    height: 120px;
+    /* border-bottom: solid 1px rgb(74, 72, 72); */
+    background-color: black;
+    /* color: white; */
+}
+
+/* 헤더 로고 */
+header img{
+    height: 120px;
+    /* border-bottom: solid 1px rgb(74, 72, 72); */
+}
+#logo{
+    float: left;
+}
+#menu{
+    float: right;
+    text-align: right;
+    margin-right: 30px;
+}
+
+#logo:hover{
+    cursor: pointer;
+}
+
+/* 헤더 메뉴 */
+#menu li{
+    display: inline-block;
+    /* border: solid 1px white; */
+}
+#login_menu li{
+    margin-top: 25px;
+}
+#main_menu li{
+    margin: 20px 0 0 80px;
+    /* font-weight: bold; */
+    font-size: 22px;
+}
+
+#main_menu li a{
+    border-radius: 5px;
+    padding: 2px 15px;
+    transition: all 0.3s ease; /* 딜레이 */
+}
+#main_menu li a:hover{
+    background-color: white;
+    color: black;
+}
