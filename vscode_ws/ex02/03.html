@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        html, body {
+            height: 100%;
+        }
+
+        body > div {
+            width: 400px;
+            height: 600px;
+            border: 2px solid black;
+            background-color: gainsboro;
+            margin: 0 auto;
+            border-radius: 15px 15px 15px 15px;
+            overflow: hidden;
+        }
+
+        .circle {
+            position: absolute;
+            width: 150px; height: 150px;
+            margin-top: 50px;
+            margin-left: 120px;
+            background-color: white;
+            border: 1px solid black;
+            border-radius: 50% 50%;
+            background-image: url('img/gildong.jpeg');
+            background-size: 100% 100%;
+            
+        }
+        .name {
+            margin-top: 250px;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        .info {
+            width: 250px;
+            height: 170px;
+            margin: 50px auto;
+            border: 1px solid black;
+            background-color: white;
+        }
+
+        li {
+            text-align: left;
+            margin-top: 5px;
+            margin-left: 50px;
+            padding: 5%;
+        }
+
+
+        
+    </style>
+</head>
+<body>
+    <div>
+        <div class="circle"></div>
+        <div class="name"><b>Mr.Hong</b></div>
+        <div class="info">
+            <li>나이 : 28</li>
+            <li>혈액형 : O</li>
+            <li>취미 : 분신술</li>
+        </div>
+    </div>
+</body>
+</html>

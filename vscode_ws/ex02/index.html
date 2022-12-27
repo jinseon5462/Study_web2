@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: azure;
+        }
+        h1{
+            text-align: center;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .item{
+            width: 200px;
+            height: 400px;
+            border: 1px solid black;
+            margin: 10px;
+            background-color: antiquewhite;
+            border-radius: 20px 20px 20px 20px;
+            /* display: flex; */
+            justify-content: center;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .photo1{
+            width: 200px;
+            height: 310px;
+            background-color: white;
+            background-image: url('images/abata.jpeg');
+            background-size: 100% 100%;
+        }
+
+        .photo2{
+            width: 200px;
+            height: 310px;
+            background-color: white;
+            background-image: url('images/hero.jpeg');
+            background-size: 100% 100%;
+        }
+
+        .photo3{
+            width: 200px;
+            height: 310px;
+            background-color: white;
+            background-image: url('images/tonight.jpeg');
+            background-size: 100% 100%;
+        }
+        
+        .join1{
+            width: 100px;
+            height: 30px;
+            border: 1px solid black;
+            margin-left: 50px;
+            margin-bottom: 5px;
+            cursor: pointer;
+            border-radius: 8px 8px 8px 8px;
+            background-color: gainsboro;
+            text-align: center;
+        }
+        .join2{
+            width: 100px;
+            height: 30px;
+            border: 1px solid black;
+            cursor: pointer;
+            border-radius: 8px 8px 8px 8px;
+            background-color: gainsboro;
+            margin-left: 50px;
+            margin-bottom: 5px;
+            text-align: center;
+        }
+        .join3{
+            width: 100px;
+            height: 30px;
+            border: 1px solid black;
+            cursor: pointer;
+            background-color: gainsboro;
+            border-radius: 8px 8px 8px 8px;
+            margin-left: 50px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .more1{
+            margin-top: 5px;
+        }
+        .more2{
+            margin-top: 5px;
+        }
+        .more3{
+            margin-top: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>상영중인 영화</h1>
+    <hr>
+    <div class="container">
+        <div class="item">
+            <div class="photo1"></div>
+            <div class="info">
+                <ul>
+                    <li>제목 : 아바타 - 물의 길</li>
+                    <li>장르 : 액션, SF</li>
+                    <li>개봉일 : 2022.12.14</li>
+                </ul>
+                <div class="join1">
+                    <div class="more1" onclick="location.href='showinfo1.html'">상세보기</div>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="photo2"></div>
+            <div class="info">
+                <ul>
+                    <li>제목 : 영웅</li>
+                    <li>장르 : 드라마, 뮤지컬</li>
+                    <li>개봉일 : 2022.12.21</li>
+                </ul>
+                <div class="join2">
+                    <div class="more2" onclick="location.href='showinfo2.html'">상세보기</div>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="photo3"></div>
+            <div class="info">
+                <ul>
+                    <li>제목 : 오늘 밤...</li>
+                    <li>장르 : 로맨스, 멜로</li>
+                    <li>개봉일 : 2022.11.30</li>
+                </ul>
+                <div class="join3">
+                    <div class="more3" onclick="location.href='showinfo3.html'">상세보기</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+</body>
+</html>
