@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin: 10px;
+            padding: 10px;
+            /* 태그를 왼쪽으로 붙인다. */
+            float: left;
+
+        }
+
+        #sam {
+            /* float를 해제시킬때 clear를 사용한다. */
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div id="sam">3</div>
+    <div id="sa">4</div>
+</body>
+</html>
