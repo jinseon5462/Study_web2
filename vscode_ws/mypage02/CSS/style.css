@@ -1,0 +1,255 @@
+/* 초기속성 */
+
+* {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    /* height: 100%; */
+    border-collapse: collapse;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration: none;
+    list-style-type: none;
+    color: white;
+    box-sizing: border-box;
+}
+
+
+header{
+    background-color: black;
+    width: 100%;
+    padding: 10px;
+    border-bottom: solid 1px rgb(74, 72, 72);
+}
+header > .menu > .logo:hover{
+    cursor: pointer;
+}
+
+header .menu{
+    max-width: 1300px;
+    /* background-color: red; */
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+/* .menu > .logo > a{
+    color: #fff;
+    font-weight: 600;
+} */
+
+.menu ul{
+    display: inline-flex;
+}
+
+.menu > ul > li{
+    margin-left: 10px;
+}
+
+.menu > ul > li > a{
+    color: white;
+    font-size: 18px;
+    font-weight: 500px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.menu >  ul > li > a:hover{
+    background-color: white;
+    color: black;
+}
+
+
+.space{
+    width: 800px;
+}
+#logo{
+    width: 200px;
+    height: 100px;
+
+}
+.main_video{
+    /* background: url('/mypage02/videos/video01.mp4'); */
+    height: 30cm;
+    width: 100%;
+    position:static;
+}
+
+/* 섹션 */
+section{
+    background-color: black;
+    /* border-top: solid 1px gainsboro; */
+}
+.section_ranking{
+    background-color: rgb(35, 35, 35);
+}
+.box{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+.box2{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+.card{
+    width: 250px;
+    height: 450px;
+    margin: 60px;
+    background-color: rgb(35, 35, 35);
+    border-radius: 20px 20px 20px 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+#photo1{
+    width: 250px;
+    height: 390px;
+    border-radius: 20px 20px 20px 20px;
+    background-color: white;
+    background-image: url('/mypage02/images/p1.jpeg');
+    background-size: 100% 100%;
+    transition: transform 200ms ease-in-out;
+}
+    
+#photo2{
+    width: 250px;
+    height: 390px;
+    border-radius: 20px 20px 20px 20px;
+    background-color: white;
+    background-image: url('/mypage02/images/p2.jpeg');
+    background-size: 100% 100%;
+    transition: transform 200ms ease-in-out;
+}
+
+#photo3{
+    width: 250px;
+    height: 390px;
+    border-radius: 20px 20px 20px 20px;
+    background-color: white;
+    background-image: url('/mypage02/images/p3.jpeg');
+    background-size: 100% 100%;
+    transition: transform 200ms ease-in-out;
+}
+#photo4{
+    width: 250px;
+    height: 390px;
+    border-radius: 20px 20px 20px 20px;
+    background-color: white;
+    background-image: url('/mypage02/images/p4.jpeg');
+    background-size: 100% 100%;
+    transition: transform 200ms ease-in-out;
+}
+#photo5{
+    width: 250px;
+    height: 390px;
+    border-radius: 20px 20px 20px 20px;
+    background-color: white;
+    background-image: url('/mypage02/images/p5.jpeg');
+    background-size: 100% 100%;
+    transition: transform 200ms ease-in-out;
+}
+#photo6{
+    width: 250px;
+    height: 390px;
+    border-radius: 20px 20px 20px 20px;
+    background-color: white;
+    background-image: url('/mypage02/images/p6.jpeg');
+    background-size: 100% 100%;
+    transition: transform 700ms ease;
+}
+
+.photo:hover{
+    transform: scale(1.1, 1.1);
+}
+
+.info{
+    margin-left: 10px;
+    margin-top: 22px;
+    font-size: 15px;
+}
+
+#name{
+    font-weight: bold;
+    font-size: large;
+    margin-bottom: 5px;
+}
+#rate_color{
+    color: red;
+}
+.date_open{
+    margin-top: 5px;
+    color: rgb(175, 173, 173);
+}
+
+/* 연령대  */
+
+#age12{
+    width: 40px;
+    height: 40px;
+    color: white;
+    float: right;
+    margin-right: 15px;
+    margin-top: 15px;
+    text-align: center;
+    padding-top: 10px;
+    border-radius: 50% 50%;
+    background-color: rgb(128, 161, 214);
+}
+
+#age15{
+    width: 40px;
+    height: 40px;
+    color: white;
+    float: right;
+    margin-right: 15px;
+    margin-top: 15px;
+    text-align: center;
+    padding-top: 10px;
+    border-radius: 50% 50%;
+    background-color: rgb(252, 141, 50);
+}
+#all_age{
+    width: 40px;
+    height: 40px;
+    color: white;
+    float: right;
+    margin-right: 15px;
+    margin-top: 15px;
+    text-align: center;
+    padding-top: 10px;
+    border-radius: 50% 50%;
+    background-color: rgb(35, 186, 45);
+}
+.age{
+    color: white;
+}
+
+/* 푸터 */
+footer{
+    background-color: black;
+    border-top: solid 1px rgb(74, 72, 72);
+}
+footer > .box{
+    margin-top: 30px;
+    height: 130px;
+    color: white;
+    display: flex;
+}
+.items{
+    margin-left: 150px;
+}
+
+/* 로그인 */
+
+
+
+
+
+
+
+
+
