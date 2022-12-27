@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        li{
+            list-style-type: none;
+        }
+        .box{
+            width: 1100px;
+            margin: 0 auto;
+            /* border: solid 1px red; */
+        }
+        aside{
+            width: 220px;
+            float: left;
+            margin: 70px 0;
+            border: solid 1px red;
+        }
+        aside .title1{
+            padding: 12px;
+            background-color: #0ca9a3;
+            color: white;
+            font-size: 18px;
+        }
+        aside .comment{
+            padding: 20px 10px;
+            line-height: 150%;
+        }
+        aside .search input{
+            width: 160px;
+            height: 32px;
+        }
+        aside .search button{
+            margin-left: 5px;
+            padding: 6px 10px;
+            border: solid 1px black;
+        }
+        /* 베이킹/요리 */
+        aside .title2{
+            margin-top: 20px;
+            padding: 12px;
+            border-top: solid 2px black;
+            border-bottom: solid 1px #cccccc;
+            font-size: 18px;
+        }
+        aside .list{
+            margin: 20px 0;
+        }
+        aside .list li{
+            margin: 10px 12px;
+        }
+        /* 최근 댓글 */
+        aside .ripple{
+            border: solid 1px #0ca9a3;
+            padding: 12px;
+        }
+        aside .ripple h2{
+            font-size: 18px;
+            margin: 10px 0 15px 0;
+        }
+        aside .ripple li{
+            margin-top: 6px;
+        }
+        #main{
+            width: 840px;
+            float: right;
+            margin: 70px 0;
+            border: dotted 1px red;
+        }
+        /* 메인 섹션 : main1 + main2 */
+        #main{
+            width: 840px;
+            float: right;
+            margin: 70px 0;
+            border: solid 1px red;
+        }
+        /* 알림과 자유게시판 */
+        #main1{
+            width: 405px;
+            float: left;
+        }
+        #main1 .title1{
+            padding-bottom: 8px;
+            border-bottom: solid 1px black;
+        }
+        #main1 .latest{
+            margin-top: 30px;
+        }
+        #main1 .items{
+            position: relative;
+            height: 34px;
+        }
+        #main1 .items .subject{
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        #main .items .date{
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        #main .title2{
+            margin-top: 30px;
+            padding-bottom: 8px;
+            border-bottom: solid 1px black;
+        }
+        /* 제빵클래스 */
+        #main2{
+            width: 400px;
+            float: right;
+        }
+        #main2 .title1{
+            padding-bottom: 8px;
+            border-bottom: solid 1px black;
+        }
+        #main2 .item1{
+            clear: both;
+            width: 189px;
+            float: left;
+            margin-top: 30px;
+        }
+        #main2 .item2{
+            width: 189px;
+            float: right;
+            margin-top: 30px;
+        }
+        
+        #main2 .subject{
+            margin-top: 10px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        #main2 .date{
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <aside>
+            <h2 class="title1">The 베이킹</h2>
+            <p class="comment">
+                안녕하세요. 쿠키와 빵 만들기 정보를 공유하고 소통하는 공간입니다.
+            </p>
+            <div class="search">
+                <input type="text"><button>검색</button>
+            </div>
+
+            <h2 class="title2">베이킹/요리</h2>
+            <ul class="list">
+                <li>쿠키 만들기</li>
+                <li>빵 만들기</li>
+                <li>마카롱 만들기</li>
+            </ul>
+
+            <div class="ripple">
+                <h2>최근 댓글</h2>
+                <ul>
+                    <li>안녕하세요.</li>
+                    <li>안녕하세요.</li>
+                    <li>안녕하세요.</li>
+                </ul>
+            </div>
+        </aside>
+
+            <section id="main">
+                <div id="main1">
+                    <h3 class="title1">알림</h3>
+                    <ul class="latest">
+                        <li class="items">
+                            <div class="subject">8월 3일 쿠킹 클래스 연기합니다.</div>
+                            <div class="date">09.30</div>
+                        </li>
+                        <li class="items">
+                            <div class="subject">8월 3일 쿠킹 클래스 연기합니다.</div>
+                            <div class="date">09.30</div>
+                        </li>
+                        <li class="items">
+                            <div class="subject">8월 3일 쿠킹 클래스 연기합니다.</div>
+                            <div class="date">09.30</div>
+                        </li>
+                        <li class="items">
+                            <div class="subject">8월 3일 쿠킹 클래스 연기합니다.</div>
+                            <div class="date">09.30</div>
+                        </li>
+                        <li class="items">
+                            <div class="subject">8월 3일 쿠킹 클래스 연기합니다.</div>
+                            <div class="date">09.30</div>
+                        </li>
+                    </ul>
+        
+                    <h3 class="title2">자유 게시판</h3>
+                    <ul class="latest">
+                        <li class="items">
+                            <div class="subject">안녕하세요. 반갑습니다.</div>
+                            <div class="date">09.30</div>
+                        </li>
+                        <li class="items">
+                            <div class="subject">안녕하세요. 반갑습니다.</div>
+                            <div class="date">09.30</div>
+                        </li>
+                        <li class="items">
+                            <div class="subject">안녕하세요. 반갑습니다.</div>
+                            <div class="date">09.30</div>
+                        </li>
+                        <li class="items">
+                            <div class="subject">안녕하세요. 반갑습니다.</div>
+                            <div class="date">09.30</div>
+                        </li>
+                        <li class="items">
+                            <div class="subject">안녕하세요. 반갑습니다.</div>
+                            <div class="date">09.30</div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div id="main2">
+                    <h3 class="title1">제빵 클래스</h3>
+                    <ul class="item1">
+                        <li><img src="./img/bread1.png"></li>
+                        <li class="subject">도너츠 만들기[3]</li>
+                        <li class="date">21.09.30</li>    
+                    </ul>
+                    <ul class="item2">
+                        <li><img src="./img/bread2.png"></li>
+                        <li class="subject">도너츠 만들기[3]</li>
+                        <li class="date">21.09.30</li>    
+                    </ul>
+                    <ul class="item1">
+                        <li><img src="./img/bread3.png"></li>
+                        <li class="subject">도너츠 만들기[3]</li>
+                        <li class="date">21.09.30</li>    
+                    </ul>
+                    <ul class="item2">
+                        <li><img src="./img/bread4.png"></li>
+                        <li class="subject">도너츠 만들기[3]</li>
+                        <li class="date">21.09.30</li>    
+                    </ul>
+                </div>
+            </section>
+    </div>
+</body>
+</html>
