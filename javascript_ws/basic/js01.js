@@ -1,4 +1,4 @@
-document.write('hello~javascript~~');
+// document.write('hello~javascript~~');
 // const(상수) : 한번 값을 할당하면 변경할 수 없다.
 // var, let : 값을 재할당할 수 있다.
 // 요즘은 let, const를 사용한다.

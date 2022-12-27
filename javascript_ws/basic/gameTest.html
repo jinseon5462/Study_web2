@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="name" value="이름을 넣으세요">
+    <div id="txt">여기에 텍스트를 넣으세요</div>
+    <img src="/basic/images/r.png" id="img"><br>
+    <button onclick="f()">이미지 넣기</button>
+    
+    <script>
+        const input_txt = document.querySelector('#name');
+        const txt = document.querySelector('#txt');
+        const img = document.querySelector('#img');
+        //const img2 = document.getElementsById('img'); 같다
+        function f(){
+            img.src = '/basic/images/p.png';
+            txt.innerText = '바꾼 텍스트';
+            input_txt.value = '홍길동';
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가위바위보</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        h2{
+            text-align: center;
+        }
+        .box1{
+            text-align: center;
+        }
+        button{
+            width: 100px;
+            background: none;
+            margin: 30px;
+            border-radius: 10px 10px 10px 10px;
+        }
+        button:nth-child(1){
+            background-color: rgb(255, 92, 17);
+            color:white;
+        }
+        button:nth-child(2){
+            background-color: rgb(0, 157, 141);
+            color:white;
+        }
+        button:nth-child(3){
+            background-color: rgb(248, 211, 0);
+            color:black;
+        }
+        
+        .box2{
+            display: flex;
+            justify-content: center;
+        }
+        .box3{
+            font-size: 15px;
+            display: flex;
+            justify-content: center;
+        }
+        .box3 > input{
+            width: 20px;
+            font-size: 15px;
+            text-align: right;
+            border: none;
+        }
+        #result{
+            font-size: 50px;
+            text-align: center;
+        }
+    </style>
+    <script src="rsp.js"></script>
+</head>
+<body>
+    <h1>가위바위보</h1>
+    <hr>
+    <div class="box1">
+        <button type="button" value="묵" onclick="check(1); gameResult()">바위</button>
+        <button type="button" value="찌" onclick="check(2); gameResult()">가위</button>
+        <button type="button" value="빠" onclick="check(3); gameResult()">보</button>
+    </div>
+    <div class="box2">
+        <img src="" id="user">
+        <img src="/basic/images/vs.png">
+        <img src="" id="com">
+    </div>
+    
+    <div id="result"></div>
+    <div class="box3">
+        나의 기록 :<input type="text" id="win" value="0" readonly>승
+        <input type="text" id="draw" value="0" readonly>무
+        <input type="text" id="loose" value="0" readonly>패
+    </div>
+    
+</body>
+</html>
