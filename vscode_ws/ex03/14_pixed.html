@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            width: 10px;
+            height: 1000px;
+            background-color: green;
+        }
+        #a{
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: red;
+            padding: 10px 20px;
+            color: white;
+        }
+        /* 
+        position 속성값
+        1. relative : 요소가 원래 있는 자리를 기준으로 상대 위치를 지정.
+        2. absolute : 브라우저 화면의 원점(또는 부모요소의 원점)을 기준으로 한 절대위치를 지정.
+            --> 부모 요소의 원점을 기준으로 할 때: 부모한테 position 속성을 relative/absolute/fixed중 하나를 지정.
+        3. fixed : 브라우저 화면의 특정 위치에 요소를 고정시킴.
+        */
+    </style>
+</head>
+<body>
+    <h3>위치 고정(position: pixed)</h3>
+    <div id="box"></div>
+    <div id="a">요소 A</div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    span{
+        background-color: lightblue;
+        border: thin solid black;
+    }
+    #a{
+        /*span은 inline 속성이므로 좌우 margin만 적용이되고, width, height적용x*/
+        width: 100px; /*적용안됨*/
+        height: 100px; /*적용안됨*/
+        margin: 20px; /*좌우만 적용됨*/
+    }
+    #b{
+        display: block; /* span이지만 block속성으로 바뀜 */
+        width: 100px; /*적용o*/
+        height: 100px; /*적용o*/
+        margin: 20px; /*적용o*/
+    }
+    #c{
+        display: inline-block; /*inline속성에 block을 추가한 속성*/
+        width: 100px; /*적용o*/
+        height: 100px; /*적용o*/
+        margin: 20px; /*적용o*/
+    }
+    /*
+    inline방식특징
+        -수평방향으로 요소가 배치되며 줄바꿈x
+        -박스 크기를 설정하는 width, height속성이 적용되지 않는다.
+        -상하단 margin이 적용안된다(좌, 우는 적용됨.)
+
+    block 방식의 특징
+        -해당 요소 앞 뒤에 자동 줄바꿈이 된다.(수직방향으로 요소들이 배치된다)
+        -박스의 크기를 설정하는 width, height 속성이 적용된다.
+        -모든 마진 설정이 가능하다.
+
+    inline-block방식의 특징
+        -인라인 특징
+            ㄴ요소가 수평방향으로 배치되고 줄바꿈이 안된다.
+        -블록 특징
+            ㄴ박스의 크기 설정이가능하다.
+            ㄴ모든 마진 설정이 가능하다.
+    */
+</style>
+<body>
+    <h3>인라인과 블록</h3>
+    <p>
+        글자1 <span id="a">요소 A</span> 글자2
+        <span id="b">요소 B</span> 글자3 
+        <span id="c">요소 C</span> 글자4
+    </p>
+</body>
+</html>
