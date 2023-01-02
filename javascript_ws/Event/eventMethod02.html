@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 버블링 방지</title>
+    <style>
+        #outer{
+            background-color: bisque;
+            padding: 20px;
+        }
+
+        #inner{
+            background-color: red;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 이벤트가 발생한 지점에서 거꾸로 올라가는것을 버블링이라고 한다. 캡처링 -->
+    <div id="outer">
+        <p id="inner">p text</p>
+    </div>
+    <script>
+        // 이벤트 버블링 : 부모요소와 자식요소 모두에 이벤트가 연결되어있는 경우...
+        // 자식 요소의 이벤트를 실행하였을 때 부모 요소의 이벤트도 같이 실행되는 현상
+        const outer = document.querySelector('#outer');
+        outer.addEventListener('click', function(e){
+            alert('아우터');
+        });
+
+        const inner = document.querySelector('#inner');
+        inner.addEventListener('click', function(e){
+            alert('이너');
+            e.stopPropagation();    // 이벤트 전파를 중단시킨다.
+        });
+    </script>
+</body>
+</html>

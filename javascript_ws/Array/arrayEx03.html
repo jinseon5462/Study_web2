@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var city = ['서울', '대구', '대전', '부산'];
+        // for..in문
+        for(let i in city){
+            document.write(i + ' ');
+        }
+        document.write('<br>');
+        
+        // for..of문
+        for(let i of city){
+            document.write(i + ' ');
+        }
+        document.write('<br>');
+
+        // forEach()
+        var num = [1, 2, 3];
+        num.forEach(function(value, index, array){
+            document.write(value + ' ');
+            document.write(index + ' ');
+            document.write(array + '<br>');
+
+        });
+
+        // forEach() 예제...배열 요소들의 합 구하기
+        var num = [1, 2, 3];
+        var sum = 0;
+        num.forEach(function(value){
+            return sum += value;
+        });
+        document.write('sum : ' + sum + '<br><br>');
+
+        // map() : 기존 배열
+        var base = [10, 20, 30];
+        base.map(function(value, index, array){
+            document.write(value + ' ');
+            document.write(index + ' ');
+            document.write(array + '<br>');
+        });
+        document.write('<br>');
+
+        var area = base.map(function(value){
+            return value * 8;
+        });
+        document.write(area + '<br><br>');
+
+        // filter() : 조건에 맞는 배열 요소들만으로 새로운 배열을 만든다.
+        var data = ['javascript', 20, 30, 'jQuery'];
+        var num = data.filter(function(value){
+            return typeof value === 'number';
+        });
+        document.write(num);
+    </script>
+</body>
+</html>

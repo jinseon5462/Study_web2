@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #item{
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div id="item"></div>
+    <script>
+        // 이벤트 객체의 주요 속성(프로퍼티)
+        // target : 이벤트를 발생시킨 객체를 반환.
+        // type : 이벤트의 이름 반환
+        // clientX : 이벤트가 발생한 X좌표의 값 반환 (브라우저 기준)
+        // clientY : 이벤트가 발생한 Y좌표의 값 반환
+        // screenX : 이벤트가 발생한 X좌표의 값 반환 (모니터 기준)
+        // screenY : 이벤트가 발생한 Y좌표의 값 반환 (모니터 기준)
+        // button : 마우스 왼쪽(0), 가운데(1), 오른쪽(2) 버튼값 반환
+        const item = document.querySelector("#item");
+        item.addEventListener('click', function(e){
+            console.log(e.type);
+            console.log(e.target);
+            console.log(e.clientX);
+            console.log(e.clientY);
+            console.log(e.screenX);
+            console.log(e.screenY);
+        });
+
+        item.addEventListener("mousedown", function(e){
+            console.log(e.button);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .numpad{
+            background-color: gray;
+            width: 500px;
+            height: 500px;
+        }
+        .box{
+            float: left;
+            width: 100px;
+            height: 100px;
+            border: solid 1px black;
+            margin: 10px;
+            background-color: yellow;
+        }
+        .temp{
+            clear: both;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="numpad">
+        <div class="box" id="a">1</div>
+        <div class="box" id="b">2</div>
+        <div class="box" id="c">3</div>
+        <div class="temp"></div>
+        <div class="box" id="d">4</div>
+        <div class="box" id="e">5</div>
+        <div class="box" id="f">6</div>
+        <div class="temp"></div>
+        <div class="box" id="g">7</div>
+        <div class="box" id="h">8</div>
+        <div class="box" id="i">9</div>
+    </div>
+    
+
+    <script>
+        const numpad = document.querySelector('.numpad');
+
+        numpad.addEventListener('click', function(e){
+            if(e.target.tagName == 'DIV'){
+                alert(e.target.innerText);
+            }
+        })
+
+
+    </script>
+</body>
+</html>

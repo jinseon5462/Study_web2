@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let dateObj = new Date(2022, 9, 30, 10, 30);    // 2022년 10월 30일 10시 30분
+        document.write(dateObj + '<br>');
+
+        let todayObj = new Date(2023, 0, 2, 12, 11);    // 2023년 1월 2일 12시 11분
+        document.write(todayObj + '<br>');
+
+        let todayInfo = {
+            year: todayObj.getFullYear(),
+            month: todayObj.getMonth() + 1,
+            date: todayObj.getDate(),
+            hours: todayObj.getHours(),
+            minutes: todayObj.getMinutes(),
+            nowDate: todayObj.toUTCString() // 국제 표준시
+        }
+
+        for(let i in todayInfo){
+            document.write(i + ' : ' + todayInfo[i] + '<br>');
+        }
+    </script>
+</body>
+</html>

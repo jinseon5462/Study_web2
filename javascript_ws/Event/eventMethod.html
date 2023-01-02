@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div><a href="http://naver.com" id="move">네이버로 가기</a></div>
+    <script>
+        const move = document.querySelector('#move');
+        move.addEventListener('click', function(e){
+            alert('move click!');
+            e.preventDefault(); // 기본기능 차단.
+            // 기본 기능 차단 후 진행할 코드 작성
+            
+            // 원래 이동할 페이지로 가도록 코드 작성
+            location.href="http://naver.com";
+        })
+    </script>
+</body>
+</html>

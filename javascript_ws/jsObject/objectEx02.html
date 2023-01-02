@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 객체 생성자 함수 (생성자 함수는 대문자로 시작한다.)
+        function Info(name, age){
+            this.name = name;
+            this.age = age;
+            this.printOut = function(){
+                return this.name + ", " + this.age;
+            }
+        }
+        var man1 = new Info("홍길동", 24);
+        // 속성 추가 (성별 : 남)
+        man1.gender = "남";
+        // 속성 삭제
+        delete man1.age;
+        man1.printOut = function(){
+            return this.name + ", " + this.gender;
+        }
+        document.write(man1.name + "<br>");
+        //document.write(man1.age + "<br>");
+        document.write(man1.gender + "<br>");
+        document.write(man1.printOut() + "<br>");
+
+        document.write("----------------------" + "<br>");
+        
+        var man2 = new Info("이순신", 33);
+        document.write(man2.name + "<br>");
+        document.write(man2.age + "<br>");
+    </script>
+</body>
+</html>

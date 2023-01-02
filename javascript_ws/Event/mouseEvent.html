@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #item{
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: greenyellow;
+            border: solid 1px black;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div id="item"></div>
+
+    <div class="box">1</div>
+    <div class="box">1</div>
+    <div class="box">1</div>
+    <script>
+        // 마우스 이벤트
+        // click : 마우스를 클릭했을 때 이벤트 발생
+        const item = document.querySelector('#item');
+
+        item.addEventListener('click', function(){
+            //alert('clicked');
+        });
+        // dbclick : 마우스를 더블클릭했을 때 이벤트 발생
+        // mouseover : 마우스를 요소 위에 위치시켰을 때 이벤트 발생
+        // mouseout : 마우스를 요소 바깥으로 이동시켰을 때 이벤트 발생
+        
+        // mousedown : 마우스를 눌렀을 때 이벤트 발생
+        item.addEventListener('mousedown', function(){
+            console.log('mousedown');
+            item.style.backgroundColor = 'yellow';
+        });
+        
+        // mouseUp : 마우스를 떼었을 때 이벤트 발생
+        item.addEventListener('mouseup', function(){
+            console.log('mouseup');
+            item.style.backgroundColor = 'aqua';
+        });
+
+        item.addEventListener('mouseover', changeBlue);
+
+        function changeBlue(){
+            console.log('mouseover');
+            for(let i = 0; i < boxes.length; i++){
+                boxes[i].style.backgroundColor = 'blue';
+            }
+        }
+        // mousemove : 마우스를 움직였을 때 이벤트 발생
+
+        const boxes = document.querySelectorAll('.box');
+        boxes[0].addEventListener('mouseover', function(){
+            console.log('mouseover');
+            for(let i = 0; i < boxes.length; i++){
+                boxes[i].style.backgroundColor = 'red';
+            }
+        });
+        boxes[1].addEventListener('mouseover', function(){
+            console.log('mouseover');
+            for(let i = 0; i < boxes.length; i++){
+                boxes[i].style.backgroundColor = 'blue';
+            }
+        });
+        boxes[2].addEventListener('mouseover', function(){
+            console.log('mouseover');
+            for(let i = 0; i < boxes.length; i++){
+                boxes[i].style.backgroundColor = 'green';
+            }
+        });
+    </script>
+</body>
+</html>

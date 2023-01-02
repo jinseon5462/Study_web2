@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">데이터 가져오기</button>
+    <table border="1" id="tbl">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>name</th>
+                <th>tel</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+            <!-- 여기에 목록이 표시됨 -->
+        </tbody>
+
+        <!-- <tr>
+            <td id="id">1</td>
+            <td id="name">2</td>
+            <td id="tel">3</td>
+        </tr> -->
+
+    </table>
+    <script>
+        let str2 = '{"id":"bbb","pw":"1111","name":"임꺽정","tel":"010-1111-1111"}';
+        // 문자열이 자바스크립트 객체 형태이므로 객체로 바꾼다.
+        // JSON --> Object : JSON.parse(문자열);
+
+        let obj = JSON.parse(str2); // 자바스크립트 객체
+        const btn = document.querySelector("#btn");
+        // btn.addEventListener("click", function(){
+        //     alert('btn clicked!');
+        // });
+        btn.addEventListener("click", f2);   // f()를 쓰게되면 바로 실행된다.
+
+        function f(){
+            let obj = JSON.parse(str2); // 자바스크립트 객체
+            let id = document.querySelector('#id');
+            let name = document.querySelector('#name');
+            let tel = document.querySelector('#tel');
+            
+            id.innerHTML = obj.id;
+            name.innerHTML = obj.name;
+            tel.innerHTML = obj.tel;
+        }
+
+        
+        const tbody = document.querySelector("#tbody");
+        function f2(){
+            let obj = JSON.parse(str2);
+            tbody.innerHTML += "<tr><td>" + obj.id + "</td><td>" + obj.name + "</td><td>" + obj.tel + "</td></tr>";
+        }
+    </script>
+</body>
+</html>

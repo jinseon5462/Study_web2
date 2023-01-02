@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // charAt()
+        var str = 'javascript';
+        document.write(str.charAt(1) + '<br>');
+
+        // indexOf()
+        var str = 'javascript';
+        document.write(str.indexOf('t') + '<br>');
+
+        // lastIndexOf()
+        var str = 'javascript';
+        document.write(str.lastIndexOf('a') + '<br>');
+
+        // includes()
+        var str = 'javascript';
+        document.write(str.includes('script') + '<br>');    //true
+        document.write(str.includes('scripta') + '<br>');   //false
+
+        // substring()
+        var str = 'http://localhost:8080/ex01';
+        document.write(str.substring(0, 4) + '<br>');
+        document.write(str.substring(17, 21) + '<br>');
+
+        // substr()
+        var str = 'http://localhost:8080/ex01';
+        document.write(str.substr(7, 4) + '<br>');
+        document.write(str.substr(7, 5) + '<br>');
+
+        // split()
+        var str = 'Javascript_jQuery';
+        var division = str.split('_');
+        document.write(division + '<br>');
+        document.write(division[0] + ', ' + division[1] + '<br>');
+
+        // replace()
+        var str = 'm_out.gif';
+        document.write(str.replace('out', 'over') + '<br>');
+
+        // concat()
+        var str = 'nav';
+        var str2 = '_bg';
+        document.write(str.concat(str2) + '<br>');
+
+        // trim()
+        var str = ' removeblank ';
+        document.write(str.trim() + '<br>');
+
+        // toLowerCase(), toUpperCase()
+        var str = 'LowerCase';
+        document.write(str.toLocaleLowerCase() + '<br>');
+        document.write(str.toUpperCase() + '<br>');
+    </script>
+</body>
+</html>

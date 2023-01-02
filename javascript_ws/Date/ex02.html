@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let today = new Date(2018, 8, 30);
+        let afterDay = new Date(2023, 0, 8);
+        afterDay.setDate(8);
+        let diffDay = afterDay.getTime() - today.getTime();
+
+        document.write(diffDay + '<br>');
+        let willDay = Math.ceil(diffDay / 1000 / 60 / 60 / 24);
+        document.write(willDay + '일');
+    </script>
+</body>
+</html>
