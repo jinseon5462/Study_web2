@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>name</th>
+                <th>age</th>
+                <th>버튼</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+            <tr>
+                <td>홍길동</td>
+                <td>23</td>
+                <td><input type="button" value="버튼"></td>
+            </tr>
+            <tr>
+                <td>고길동</td>
+                <td>33</td>
+                <td><input type="button" value="버튼"></td>
+            </tr>
+            <tr>
+                <td>최길동</td>
+                <td>43</td>
+                <td><input type="button" value="버튼"></td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        const btn = document.querySelector('input[type="button"]');
+        const tbody = document.getElementById("tbody");
+        
+        btn.addEventListener('click', function(e){
+            if(e.target.tagName == 'INPUT'){
+                alert(e.target.parentNode.
+                previousElementSibling.firstChild.innerText);
+            }
+        })
+    </script>
+</body>
+</html>
