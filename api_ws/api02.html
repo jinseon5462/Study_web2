@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            text-align: center;
+        }
+        .info_box{
+            display: none;
+            
+        }
+        #info_tbl th{
+            width: 200px;
+        }
+        img{
+            width: 100px;
+            height: 100px;
+        }
+        #box{
+            width: 300px;
+            height: 500px;
+            display: none;
+        }
+        #title{
+            border: solid 1px black;
+        }
+        #content{
+            border: solid 1px black;
+        }
+        #address{
+            border: solid 1px black;
+        }
+    </style>
+</head>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>지정번호</th>
+                <th>명칭</th>
+                <!-- <th>명칭(한문)</th>
+                <th>문화재설명</th>
+                <th>수량(면적)</th>
+                <th>소유자</th>
+                <th>관리자</th>
+                <th>시대</th>
+                <th>지정일</th>-->
+                <th>주소</th>
+                <th>사진</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+            <!-- 데이터 -->
+        </tbody>
+    </table>
+
+    <div class="info_box">
+        <div id="close_btn" onclick="close">X</div>
+        <table id="info_tbl" border="1">
+        </table>
+    </div>
+
+    <div class="box">
+        <div id="title"></div>
+        <div id="content"></div>
+        <div id="address"></div>
+    </div>
+    
+    <script>
+        /* Javascript 샘플 코드 */
+        let tbody = document.querySelector("#tbody");
+        var xhr = new XMLHttpRequest();
+        var url = 'http://apis.data.go.kr/6480000/gyeongnamcultural/gyeongnamculturallist'; /*URL*/
+        var queryParams = '?' + encodeURIComponent('serviceKey') + '='+'vbBBjl0VlHJqEo4y%2BbQ9b911aKAwGabm%2Bd%2BDUGOITs2pSYs1w%2BYWvt1Tz57GiDAa8g7LGt4KYAV45e5a3hGL2Q%3D%3D'; /*Service Key*/
+        queryParams += '&' + encodeURIComponent('pageNo') + '=' + encodeURIComponent('1'); /**/
+        queryParams += '&' + encodeURIComponent('numOfRows') + '=' + encodeURIComponent('10'); /**/
+        queryParams += '&' + encodeURIComponent('resultType') + '=' + encodeURIComponent('json'); /**/
+        xhr.open('GET', url + queryParams);
+
+        xhr.onreadystatechange = function () {
+            if (this.readyState == 4) {
+                let data = this.responseText;
+                let obj = JSON.parse(data);
+                let items = obj.gyeongnamculturallist.body.items.item;
+                for(let i = 0; i < items.length; i++){
+                    tbody.innerHTML += "<tr><td id=" + i + ">" + items[i].DOJIJUNG_NO
+                        + "</td><td>"+ items[i].MYONGCHING 
+                        // + "</td><td>" + items[i].MYONGCHING_HANMUN
+                        // + "</td><td>" + items[i].CONTENT
+                        // + "</td><td>" + items[i].MYONJUK
+                        // + "</td><td>" + items[i].SOYOUJA_NAME
+                        // + "</td><td>" + items[i].ADMIN_NAME
+                        // + "</td><td>" + items[i].SIDAE
+                        // + "</td><td>" + items[i].JIJUNG_DATE
+                        + "</td><td>" + items[i].ADDRESS1
+                        + "</td><td><img src=" + items[i].fileurl1
+                        + "></td></tr>";
+                }
+                tbody.addEventListener("click",function(e){
+                    alert(e.target.parentElement.children[0].id);
+                    let index = e.target.parentElement.children[0].id;
+                    let tbl = document.querySelector("#info_tbl");
+                    tbl.replaceChildren();
+                    // tbl.innerHTML += 
+                    //     "<tr><th>지정번호</th>" + "<td>" + items[index].DOJIJUNG_NO + "</td></tr>"
+                    //     + "<tr><th>명칭</th>" + "<td>" + items[index].MYONGCHING + "</td></tr>" 
+                    //     + "<tr><th>명칭(한문)</th>" + "<td>" + items[index].MYONGCHING_HANMUN + "</td></tr>"
+                    //     + "<tr><th>문화재 설명</th>" + "<td>" + items[index].CONTENT + "</td></tr>"
+                    //     + "<tr><th>수량(면적)</th>" + "<td>" + items[index].MYONJUK + "</td></tr>"
+                    //     + "<tr><th>소유자</th>" + "<td>" + items[index].SOYOUJA_NAME + "</td></tr>"
+                    //     + "<tr><th>관리자</th>" + "<td>" + items[index].ADMIN_NAME + "</td></tr>"
+                    //     + "<tr><th>시대</th>" + "<td>" + items[index].SIDAE + "</td></tr>"
+                    //     + "<tr><th>지정일</th>" + "<td>" + items[index].JIJUNG_DATE + "</td></tr>"
+                    //     + "<tr><th>주소</th>" + "<td>" + items[index].ADDRESS1 + "</td></tr>";
+
+                    document.querySelector("#title").innerText = items[index].MYONGCHING;
+                    document.querySelector("#content").innerText = items[index].CONTENT;
+                    document.querySelector("#address").innerText = items[index].ADDRESS1;
+                    document.querySelector("#box").style.display = "block";
+                });
+            }
+        };
+        xhr.send('');
+
+    </script>
+</body>
+</html>

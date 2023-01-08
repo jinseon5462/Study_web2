@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: powderblue;
+        }
+        
+    </style>
+</head>
+<body>
+    <button id="btn">요소 생성</button>
+    <script>
+        const btn = document.querySelector("#btn");
+        btn.addEventListener('click', createEle);
+
+        function createEle(){
+            
+            let div = document.createElement('div');
+            let p = document.createElement('p');
+            let txt = document.createTextNode('자바스크립트');
+            p.appendChild(txt);
+            div.appendChild(p);
+            document.body.appendChild(div);
+        }
+    </script>
+    <button id="btn_tbl">테이블 생성</button>
+    <script>
+        const btn_tbl = document.querySelector("#btn_tbl");
+        btn_tbl.addEventListener('click', createTable);
+
+        function createTable(){
+            let table = document.createElement('table');
+
+            let tr1 = document.createElement('tr');
+            let tr2 = document.createElement('tr');
+            
+            let td1 = document.createElement('td');
+            let td2 = document.createElement('td');
+            let td3 = document.createElement('td');
+            let td4 = document.createElement('td');
+            
+            let txt1 = document.createTextNode('홍길동');
+            let txt2 = document.createTextNode('홍길순');
+            let txt3 = document.createTextNode('홍만최');
+            let txt4 = document.createTextNode('홍현희');
+            
+            td1.appendChild(txt1);
+            td2.appendChild(txt2);
+
+            tr1.appendChild(td1);
+            tr1.appendChild(td2);
+            
+            td3.appendChild(txt3);
+            td4.appendChild(txt4);
+
+            tr2.appendChild(td3);
+            tr2.appendChild(td4);
+            
+            table.appendChild(tr1);
+            table.appendChild(tr2);
+            table.setAttribute('border', '1');
+            table.setAttribute('width', '400px');
+
+            document.body.appendChild(table);
+        }
+    </script>
+</body>
+</html>

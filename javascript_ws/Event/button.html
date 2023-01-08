@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+        }
+        .box{
+            width: 250px;
+            height: 50px;
+            border: solid 1px black;
+            display: flex;
+            line-height: 50px;
+            margin: 10px;
+        }
+        .color{
+            margin-right: 50px;
+        }
+        #color1{
+            width: 50px;
+            height: 50px;
+            background-color: red;
+        }
+        #color2{
+            width: 50px;
+            height: 50px;
+            background-color: blue;
+        }
+        #color3{
+            width: 50px;
+            height: 50px;
+            background-color: yellow;
+        }
+        span:hover{
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="red">
+            <div class="color" id="color1"></div>
+            <span>red button</span>
+        </div>
+        <div class="box" id="blue">
+            <div class="color" id="color2"></div>
+            <span>blue button</span>
+        </div>
+        <div class="box" id="yellow">
+            <div class="color" id="color3"></div>
+            <span>yellow button</span>
+        </div>
+    </div>
+
+    <script>
+        const box = document.querySelector("#box");
+        const container = document.querySelector(".container");
+        const body = document.querySelector("body");
+        container.addEventListener('mouseover', function(e){
+            if(e.target.id != 'container'){
+                // document.body.style.background = e.target.
+            }
+            let color = e.target.innerText.split(' ');
+            body.style.backgroundColor = color[0];
+            
+        });
+        container.addEventListener('mouseout', function(e){
+            body.style.backgroundColor = "white";
+        });
+    </script>
+</body>
+</html>

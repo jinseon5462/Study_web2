@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            margin: 0 auto;
+            position: relative;
+            top: 10px;
+        }
+        div{
+            width: 250px;
+            height: 80px;
+            background-color: orange;
+        }
+        section{
+            width: 300px;
+            height: 100px;
+            background-color: gray;
+        }
+        p{
+            width: 200px;
+            height: 60px;
+            background-color: blueviolet;
+            color: white;
+            text-align: center;
+            line-height: 60px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div id="out">
+            <p id="in">hello event</p>
+        </div>
+    </section>
+    <script>
+        const pTag = document.querySelector("#in");
+        const divTag = document.querySelector("#out");
+        const sectionTag = document.querySelector("section");
+
+        // false 이벤트 버블링
+        // true 이벤트 캡처링
+        // 같은 이벤트 속성을 가지고 있어야 한다.
+
+        pTag.addEventListener('click', f, false);
+        divTag.addEventListener('click', f, false);
+        sectionTag.addEventListener('click', f, false);
+
+        function f(){
+            alert(this.tagName);
+        }
+    </script>
+</body>
+</html>
