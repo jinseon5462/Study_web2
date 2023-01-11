@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>경상남도 문화재 정보</title>
+    <style>
+        h1{
+            text-align: center;
+            user-select: none;
+        }
+        table{
+            border-collapse: collapse;
+            margin: 0 auto;
+        }
+        img{
+            width: 100px;
+            height: 90px;
+            user-select: none;
+        }
+        .outer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 120%; /*100%*/
+            width: 100%; /*100%*/
+            display: none;
+            background-color: rgba(133, 133, 133, 0.9);
+        }
+        .inner{
+            background-color: beige;
+            position: fixed;
+            top: 50px;
+            bottom: 100px;
+            left: 0;
+            right: 0;
+            width: 600px;
+            height: 800px;
+            margin: 0 auto;
+            border: solid 1px black;
+            border-radius: 5px;
+            overflow: scroll;
+        }
+        #photo{
+            border-bottom: solid 1px gainsboro;
+            /* text-align: center; */
+        }
+        #photo > img{
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 30px;
+            width: 300px;
+            height: 300px;
+            border-radius: 10px;
+        }
+        #close_btn{
+            position: fixed;
+            background-color: rgb(255, 90, 90);
+            width: 20px;
+            padding: 2px;
+            /* text-align: center; */
+            color: rgb(60, 60, 60);
+            border: solid 1px gainsboro;
+            border-radius: 5px;
+            cursor: pointer;
+            user-select: none;
+        }
+        #num{
+            border-bottom: solid 1px gainsboro;
+            padding: 10px;
+            user-select: none;
+        }
+        #myonjuk{
+            border-bottom: solid 1px gainsboro;
+            padding: 10px;
+            user-select: none;
+        }
+        #sidae{
+            border-bottom: solid 1px gainsboro;
+            padding: 10px;
+            user-select: none;
+        }
+        #content{
+            padding: 10px;
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>경상남도 문화재정보</h1>
+    <hr>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>지정번호</th>
+                <th>명칭</th>
+                <th>주소</th>
+                <th>사진</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+    
+        </tbody>
+    </table>
+    <div class="outer">
+        <div class="inner">
+            <button id="close_btn">X</button>
+            <h1 id="title"></h1>
+            <div id="photo"></div>
+            <div id="num"></div>
+            <div id="myonjuk"></div>
+            <div id="sidae"></div>
+            <div id="content"></div>
+            <div id="map"></div>
+        </div>
+    </div>
+    <script>
+        /* Javascript 샘플 코드 */
+        var xhr = new XMLHttpRequest();
+        var url = 'http://apis.data.go.kr/6480000/gyeongnamcultural/gyeongnamculturallist'; /*URL*/
+        var queryParams = '?' + encodeURIComponent('serviceKey') + '='+'vbBBjl0VlHJqEo4y%2BbQ9b911aKAwGabm%2Bd%2BDUGOITs2pSYs1w%2BYWvt1Tz57GiDAa8g7LGt4KYAV45e5a3hGL2Q%3D%3D'; /*Service Key*/
+        queryParams += '&' + encodeURIComponent('pageNo') + '=' + encodeURIComponent('1'); /**/
+        queryParams += '&' + encodeURIComponent('numOfRows') + '=' + encodeURIComponent('10'); /**/
+        queryParams += '&' + encodeURIComponent('resultType') + '=' + encodeURIComponent('json'); /**/
+        xhr.open('GET', url + queryParams);
+
+        let tbody = document.querySelector("#tbody");
+
+        xhr.onreadystatechange = function () {
+            if (this.readyState == 4) {
+                let data = this.responseText;
+                let obj = JSON.parse(data);
+                let items = obj.gyeongnamculturallist.body.items.item;
+                for(let i = 0; i < items.length; i++){
+                    tbody.innerHTML += "<tr><td id=" + i + ">" + items[i].DOJIJUNG_NO
+                        + "</td><td>"+ items[i].MYONGCHING 
+                        + "</td><td>" + items[i].ADDRESS1
+                        + "</td><td><img src=" + items[i].fileurl1
+                        + "></td></tr>";
+                }
+                tbody.addEventListener("click", function(e){
+                    let index = e.target.parentElement.children[0].id;
+                    let title = document.querySelector("#title");
+                    let photo = document.querySelector("#photo");
+                    let num = document.querySelector("#num");
+                    let myonjuk = document.querySelector("#myonjuk");
+                    let sidae = document.querySelector("#sidae");
+                    let content = document.querySelector("#content");
+                    
+                    title.innerText = items[index].MYONGCHING;
+                    photo.innerHTML = "<img src=" + items[index].fileurl1 + ">";
+                    num.innerText = "지정번호 : " + items[index].DOJIJUNG_NO;
+                    myonjuk.innerText = "면적 : " + items[index].MYONJUK;
+                    sidae.innerText = "시대 : " + items[index].SIDAE;
+                    content.innerText = items[index].CONTENT;
+                    document.querySelector(".outer").style.display = "block";
+                });
+        
+                function openInfoBox(e){
+                    let index = e.target.parentElement.children[0].id;
+                    let title = document.querySelector("#title");
+                    let photo = document.querySelector("#photo");
+                    let num = document.querySelector("#num");
+                    let myonjuk = document.querySelector("#myonjuk");
+                    let sidae = document.querySelector("#sidae");
+                    let content = document.querySelector("#content");
+                    let map = document.querySelector("#map");
+                    
+                    title.innerText = items[index].MYONGCHING;
+                    photo.innerHTML = "<img src=" + items[index].fileurl1 + ">";
+                    num.innerText = "지정번호 : " + items[index].DOJIJUNG_NO;
+                    myonjuk.innerText = "면적 : " + items[index].MYONJUK;
+                    sidae.innerText = "시대 : " + items[index].SIDAE;
+                    content.innerText = "문화재 설명 : " + items[index].CONTENT;
+                    map.innerText 
+                }
+                let close_btn = document.querySelector("#close_btn");
+                close_btn.addEventListener("click", function(e){
+                    document.querySelector(".outer").style.display = "none";
+                });
+            }
+        };
+        xhr.send('');
+    </script>
+</body>
+</html>
