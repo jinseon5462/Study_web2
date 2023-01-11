@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        .bg{
+            padding: 40px;
+            margin-bottom: 40px;
+            background-color: #ccc;
+        }
+        .inner{
+            padding: 20px;
+            background-color: #999;
+        }
+    </style>
+    <script src="jquery/jquery-3.3.1.min.js"></script>
+    <script>
+        $(function(){
+            // mouseover() : 자식한테도 영향을 준다.
+            $(".wrap1").mouseover(function(){
+                $(".display").append("<strong>마우스오버</strong>");
+            });
+
+            // mouseenter() : 자식한테 영향을 주지 않는다.
+            $(".wrap2").mouseenter(function(){
+                $(".display").append("<em>마우스 들어감</em>");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="wrap1 bg">
+        <div class="inner">mouseover</div>
+    </div>
+    <div class="wrap2 bg">
+        <div class="inner">mouseenter</div>
+    </div>
+    <div class="display"></div>
+</body>
+</html>

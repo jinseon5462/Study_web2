@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-size: 12px;
+        }
+        textarea{
+            width: 300px;
+            height: 200px;
+            border: 1px solid #000;
+        }
+        textarea.on{
+            background-color: #ff6600;
+            color: white;
+        }
+        #display{
+            width: 300px;
+            height: 100px;
+            word-break: break-all;
+            border: 1px solid black;
+            overflow: auto;
+        }
+    </style>
+    <script src="jquery/jquery-3.3.1.min.js"></script>
+    <script>
+        // keypress : keydown과 유사함. 단 특수키(alt, shift 등은 이벤트가 발생하지 않음.)
+        $(function(){
+            $("textarea").keypress(function(){
+                $(this).addClass("on");
+            }).keyup(function(){
+                $("#display").text($(this).val());
+            });
+        });
+    </script>
+</head>
+<body>
+    <textarea></textarea>
+    <div id="display"></div>
+</body>
+</html>

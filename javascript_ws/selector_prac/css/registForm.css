@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+  
+}
+
+
+body{
+    background-color: lightslategray;
+    padding: 20px;
+}
+#signup{
+    background-color: lightgray;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 20px;
+    width: 400px;
+    margin: 30px auto;
+}
+#signup fieldset{
+    border: 1px solid lightslategray;
+    margin-bottom: 30px;
+}
+#signup legend{
+    font-size: 16px;
+    font-weight: bold;
+    padding-left: 5px;
+    padding-bottom: 10px;
+}
+#signup ul li{
+    line-height: 30px;
+    list-style: none;
+    padding: 5px 10px;
+    margin-bottom: 2px;
+}
+#signup button{
+    border: 1px solid black;
+    border-radius: 20px;
+    margin: 0 auto;
+    display: block;
+    font-size: 16px 맑은 고딕,굴림,돋움;
+    letter-spacing: 1px;
+    padding: 7px 25px;
+}
+
+#signup label{
+    float: left;
+    font-size: 13px;
+    width: 110px;
+}
+
+#signup input{ /* or input */
+    border: 1px solid blue;
+    border-radius: 3px;
+    font-size: 13px;
+    padding: 5px;
+    width: 200px;
+}
+
+#signup input[required]{ /*필수입력항목(required)에 스타일 적용*/
+    border: 1px solid lightcoral;
+}
+
+#signup input[readonly]{ /*readonly 영역 스타일 적용*/
+    border: none;
+}

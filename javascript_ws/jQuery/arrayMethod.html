@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.3.js" 
+    integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" 
+    crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1>$.each() 메서드 형식</h1>
+    <hr>
+
+    <hr>
+    <h1>$(셀렉터).each() 메서드 형식</h1>
+    
+    <div class="m1">내용1</div>
+    <div class="m1">내용2</div>
+    <div class="m1">내용3</div>
+    <script>
+        // 배열에 사용
+        var city = ["서울", "대구", "대전", "부산"];
+        $.each(city, function(index, value){
+            console.log(index); // 0 1 2 3
+            console.log(value); // 서울 대구 대전 부산
+        });
+
+        // 객체에 사용
+        var subjectInfo = {
+            subject: "html",
+            grade: 1,
+            days: 20
+        };
+
+        $.each(subjectInfo, function(key, value){
+            console.log(key);
+            console.log(value);
+        });
+
+        // $(셀렉터).each() 메서드
+        alert($("div").attr("class"));
+        $("div").each(function(index, element){
+            console.log(index);
+            console.log(element);
+            console.log($(this).attr("class"));
+        });
+    </script>
+</body>
+</html>

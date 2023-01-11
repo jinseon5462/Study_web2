@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.3.js" 
+    integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" 
+    crossorigin="anonymous"></script>
+</head>
+<body>
+    <form>
+        <input type="text" id="id" name="id" value="aaa"><br>
+        <input type="text" id="name" name="name" value="홍길동">
+        <input type="checkbox" name="chk1" id="chk1">
+        <input type="checkbox" name="chk2" id="chk2" checked>
+        <input type="checkbox" name="chk3" id="chk3">
+        <select name="se_1" id="se_1">
+            <option value="opt1">option1</option>
+            <option value="opt2">option2</option>
+            <option value="opt3" selected>option3</option>
+        </select>
+
+    </form>
+    <div id="demo">여기에 이름을 표시하시오.</div>
+    <script>
+        // const name = $("input[name='name'").val();
+        // $("#demo").text(name);
+
+        const name = $("#name").val();
+        $("#demo").text(name);
+
+        const default_id = $("#id").prop("defaultValue");
+        // alert(default_id);
+
+        var result_1 = $("#chk2").prop("checked");
+        alert(result_1);
+
+        var result_2 = $("#chk3").prop("checked", true);
+
+        var result_3 = $("#se_1").prop("selectedIndex");
+        alert(result_3);
+    </script>
+</body>
+</html>

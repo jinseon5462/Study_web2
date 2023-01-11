@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.3.js" 
+    integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" 
+    crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <script>
+        var city = ["서울", "대구", "대전", "부산"];
+        // 기존의 배열을 새로운 배열에 취합해야할때 map을 사용한다.
+        var newCity = $.map(city, function(value, index){
+            if(index < 2){
+                return value;
+            }
+        });
+        console.log(newCity.toString());
+
+        // $.map(city, function(value, index){
+        //     console.log(value);
+        //     console.log(index);
+        // });
+    </script>
+</body>
+</html>

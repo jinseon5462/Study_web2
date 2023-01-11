@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.3.js" 
+    integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" 
+    crossorigin="anonymous"></script>
+    <style>
+        body{
+            background-color: lightgray;
+        }
+        div, p{
+            border: solid 1px black;
+            margin: 10px;
+        }
+        li{
+            background-color: orange;
+            border: 1px dashed blue;
+            margin: 2px;
+            width: 200px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">container
+        <div id="one">1
+            <div id="two">2</div>
+            <div id="three">3
+                <div id="four">4</div>
+                <div id="five">5
+                    <ul>
+                        <li>li01</li>
+                        <li>li02</li>
+                        <li>li03</li>
+                        <li>li04</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="sample">sample
+            <div id="six">6
+                <div>7
+                    <p>p1</p>
+                    <p id="p2">p2</p>
+                    <p id="p3">p3</p>
+                    <p>p4</p>
+                    <ul>
+                        <li>p4-li1</li>
+                    </ul>
+                    <p>p5</p>
+                    <p>p6</p>
+                    <p id="p7">p7</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var style_red = {
+            "color": "red"
+        }
+        var style_blue = {
+            "color": "blue"
+        }
+
+        $("body").css("background-color", "lightgray");
+        $("div, p").css({
+            "border": "1px solid black",
+            "margin": "10px"
+        });
+
+        $("li").css({
+            "background-color": "orange",
+            "border": "1px dashed blue",
+            "margin": "2px",
+            "width": "200px"
+        });
+
+        // $("#one > div:first-child").css("color", "red");
+        // $("#two").parent().css("color", "red");
+        // $("#four").next().css("color", "red");
+        // $("#six > p:last-child").css("color", "blue");
+        // $("#six > p:last-child").prev().css("color", "red");
+        // $("#six > p:last-child").parent().css("color", "red");
+        // $("#six p:last-child").closest("#sample").css("color", "red");
+        // $("#six p:last-child").closest(".container").css("color", "red");
+        // $("#sample").children().css("color", "blue");
+        // $("#six p:last-child").prev().prevUntil("#p2").css("color","red");
+        // $("#p2").nextUntil("#p7").css("color", "red");
+        // $("#p2").siblings().css("color", "red");
+        // $("#p2 + p").next().css("color", "red");
+        // $("#p3").next().css("color", "blue");
+        // $("li:even").css(style_red);
+        // $("li:odd").css(style_blue);
+        // $("li:nth-child(2)").css(style_red);
+        // $("li").eq(3).css(style_blue);
+        // $("li:eq(3)").css(style_blue);
+        // $("li:gt(2)").css(style_red);
+        // $("li:lt(2)").css(style_red);
+        // $("li").slice(1).css(style_red);
+        $("li:only-child").css(style_red);
+    </script>
+</body>
+</html>
