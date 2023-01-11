@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        #signup ul li{
+            line-height: 30px;
+            padding: 5px 10px;
+            margin-bottom: 2px;
+        }
+        fieldset{
+            padding-top: 40px;
+            margin: 0 auto;
+            padding-left: 70px;
+            margin-top: 100px;
+            width: 400px;
+            height: 400px;
+            border-radius: 10px;
+            box-shadow: 10px 10px 10px gray;
+        }
+        fieldset > legend{
+            /* text-align: center; */
+            font-weight: bold;
+            font-size: 20px;
+            color: rgb(76, 76, 76);
+        }
+        #signup fieldset:first-of-type label{
+            float: left;
+            width: 60px;
+        }
+        #reg_ul input{
+            height: 25px;
+            border-radius: 5px;
+            border: solid 1.5px gray;
+        }
+        select{
+            border: 2px solid gray;
+            border-radius: 5px;
+            width: 140px;
+            text-align: center;
+        }
+        input[type="button"]{
+            
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <header>
+            <div id="login_status">
+                <div id="user">이진선</div>님&nbsp;|&nbsp;
+                <div id="logout"><a href="#">로그아웃</a></div>
+            </div>
+            <div id="logo">
+                <img src="images/project_logo02.png" onclick="location.href='index.html'">
+            </div>
+            <nav>
+                <ul id="main_menu">
+                    <li><a href="index.html">홈으로</a></li>
+                    <li><a href="#">자유 게시판(X)</a></li>
+                    <li><a href="#">인기 게시글(X)</a></li>
+                    <!-- <li><a href="#">장터 게시판(X)</a></li> -->
+                    <!-- <li><a href="#">강의평가 게시판(X)</a></li> -->
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+    <div class="box">
+        <form action="#" id="signup">
+            <fieldset>
+                <legend>회원가입</legend>
+                <ul id="reg_ul">
+                    <li>
+                        <label for="id">아이디</label>
+                        <input type="text" id="id" name="id" autocomplete="off" required>
+                        <input type="button" id="idcheck_btn" value="중복확인">
+                        <!-- <div>중복확인결과 : 사용가능한 아이디입니다.</div> -->
+                    </li>
+                    <li>
+                        <label for="pw">비밀번호</label>
+                        <input type="text" id="pw" name="pw" autocomplete="off">
+                    </li>
+                    <li>
+                        <label for="nickname">닉네임</label>
+                        <input type="text" id="pw" name="pw" autocomplete="off">
+                    </li>
+                    <li>
+                        <label for="name">이름</label>
+                        <input type="text" id="pw" name="pw" autocomplete="off">
+                    </li>
+                    <li>
+                        <label for="tel">전화번호</label>
+                        <input type="text" id="pw" name="pw" autocomplete="off">
+                    </li>
+                    <li><label for="sel">학교</label>
+                        <select name="sel" id="sel">
+                            <option value="">학교를 선택해주세요.</option>
+                            <option value="부산대">부산대</option>
+                            <option value="부경대">부경대</option>
+                            <option value="동아대">동아대</option>
+                            <option value="동의대">동의대</option>
+                            <option value="경성대">경성대</option>
+                        </select>
+                    </li>
+                </ul>
+                <input type="button" id="reg_btn" value="등록">
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>
