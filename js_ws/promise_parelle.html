@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function sum(num1, num2){
+            return new Promise(function(resolve, reject){
+                setTimeout(function(){
+                    let result = num1 + num2;
+                    console.log(num1 + " + " + num2 + "=");
+                    resolve(result);
+                }, 2000);
+            });
+        }
+        function minus(num1, num2){
+            return new Promise(function(resolve, reject){
+                setTimeout(function(){
+                    let result = num1 - num2;
+                    console.log(num1 + " - " + num2 + "=");
+                    resolve(result);
+                }, 2000);
+            });
+        }
+        function multiply(num1, num2){
+            return new Promise(function(resolve, reject){
+                setTimeout(function(){
+                    let result = num1 * num2;
+                    console.log(num1 + " X " + num2 + "=");
+                    resolve(result);
+                }, 2000);
+            });
+        }
+        function devide(num1, num2){
+            return new Promise(function(resolve, reject){
+                setTimeout(function(){
+                    let result = num1 + num2;
+                    console.log(num1 + " / " + num2 + "=");
+                    resolve(result);
+                }, 2000);
+            });
+        }
+
+        sum(100, 200).then(function(response){
+            console.log(response);
+            return minus(100, 200);
+        }).then(function(response){
+            console.log(response);
+            return multiply(100, 200);
+        }).then(function(response){
+            console.log(response);
+            return devide(100, 200);
+        }).then(function(){
+            console.log("실행완료...");
+        });
+
+        
+    </script>
+</body>
+</html>

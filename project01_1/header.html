@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>에브리데이</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            text-decoration: none;
+            text-align: center;
+            color: #000;
+            box-sizing: border-box;
+        }
+        .header{
+            width: 1300px;
+            height: 150px;
+            margin: 0 auto;
+            display: flex;
+            border-bottom: solid 1px gainsboro;
+        }
+        #main_logo{
+            width: 150px;
+            height: 150px;
+            cursor: pointer;
+        }
+        #gnb{
+            width: 900px;
+            position: relative;
+            margin-left: 100px;
+        }
+        #gnb ul li{
+            float: left;
+            width: 150px;
+            height: 150px;
+            line-height: 150px;
+        }
+        #gnb ul li a {
+            color: #999;
+            font-size: 1.2em;
+            font-weight: bold;
+            transition: color 0.3s ease;
+            padding: 20px;
+        }
+        #gnb a.on{
+            color: #000;
+        }
+        #gnb span{
+            border-bottom: 3px solid #ff4000;
+            height: 150px;
+            width: 150px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+        .buttons{
+            width: 150px;
+            height: 150px;
+            line-height: 150px;
+        }
+        #top_signUp_btn{
+            width: 65px;
+            height: 40px;
+            cursor: pointer;
+            background: rgb(203, 56, 56);
+            color: white;
+            border: none;
+            border-radius: 10px;
+        }
+        #top_login_btn{
+            width: 65px;
+            height: 40px;
+            cursor: pointer;
+            background: none;
+            border: solid 0.8px rgb(179, 179, 179);
+            border-radius: 10px;
+        }
+    </style>
+    <script src="jquery/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+    <div class="header">
+        <img src="images/project_logo02.png" id="main_logo">
+        <nav id="gnb">
+            <ul>
+                <li><a href="#">홈으로</a></li>
+                <li><a href="#">내 시간표</a></li>
+                <li><a href="#">자유게시판</a></li>
+                <li><a href="#">인기게시판</a></li>
+            </ul>
+        </nav>
+        <div class="buttons">
+            <button type="button" id="top_login_btn">로그인</button>
+            <button type="button" id="top_signUp_btn">회원가입</button>
+        </div>
+    </div>
+    
+    <script>
+        $(document).ready(function(){
+            let w = $("#gnb ul li").width();
+            $("#gnb").append("<span></span>");
+            $("#gnb ul li").on("mouseenter focusin", function(){
+                let index = $(this).index();
+                console.log(index);
+                $(this).find("a").addClass("on");
+                $(this).siblings().find("a").removeClass("on");
+                $("#gnb span").stop().animate({
+                    left: index * w //
+                }, "fast", "swing");
+            });
+            $("#gnb ul li:eq(0)").trigger("mouseenter");
+        });
+    </script>
+</body>
+</html>

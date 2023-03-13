@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function welcome(){
+            setTimeout(function (){
+                console.log("Welcome");
+            }, 3000)
+        }
+        function to(){
+            setTimeout(function (){
+                console.log("to");
+            }, 2000)
+        }
+        function world(){
+            setTimeout(function (){
+                console.log("World");
+            }, 1000)
+        }
+        function end(response){
+            console.log("end...");
+        }
+        welcome();
+        to();
+        world();
+        console.log("실행완료");
+    </script>
+</body>
+</html>

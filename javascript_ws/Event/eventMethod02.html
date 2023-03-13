@@ -20,7 +20,10 @@
 <body>
     <!-- 이벤트가 발생한 지점에서 거꾸로 올라가는것을 버블링이라고 한다. 캡처링 -->
     <div id="outer">
-        <p id="inner">p text</p>
+        <p id="inner">p text1</p>
+        <p id="inner">p text2</p>
+        <p id="inner">p text3</p>
+        <p id="inner">p text4</p>
     </div>
     <script>
         // 이벤트 버블링 : 부모요소와 자식요소 모두에 이벤트가 연결되어있는 경우...
@@ -32,7 +35,7 @@
 
         const inner = document.querySelector('#inner');
         inner.addEventListener('click', function(e){
-            alert('이너');
+            alert(e.target.innerText);
             e.stopPropagation();    // 이벤트 전파를 중단시킨다.
         });
     </script>

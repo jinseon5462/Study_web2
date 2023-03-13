@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 프로미스 : 약속 -->
+    <script>
+        let promise = new Promise(function(resolve, reject){
+            setTimeout(function(){
+                console.log("Hello");
+                reject("World");
+            }, 2000);
+        });
+
+        promise.then(function(response){
+            console.log("성공");
+        }).catch(function(){
+            console.log("실패");
+        }).finally(() => {
+            console.log("끝");
+        });
+
+        console.log("실행완료");
+    </script>
+</body>
+</html>

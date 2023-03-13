@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        f(x); // 호이스팅
+        //콜백함수 : 어떤 함수의 매개변수로 함수가 들어가 있는 것
+        //함수 내에 또 함수가 포함되어있는 상태 -> function f(함수)
+        //용도 : 해당 함수가 종료되면 실행되는 함수로 사용
+        function f(cb){
+            console.log('f()…………');
+            //console.log(cb);
+            cb();
+        }
+        
+        function x(){
+            console.log('x()……..')
+        }
+    </script>
+</body>
+</html>

@@ -15,7 +15,7 @@
 
 /* 헤더 */
 header{
-    height: 150px;
+    height: 130px;
     border-bottom: 1px solid gainsboro;
 }
 /* 상단 로그인 상태 */
@@ -24,12 +24,12 @@ header{
     justify-content: end;
     font-size: 15px;
     height: 20px;
-    margin-top: 20px;
+    padding-top: 30px;
 }
 /* 로고 이미지 */
 #logo img{
-    width: 130px;
-    height: 130px;
+    width: 100px;
+    height: 100px;
     margin-left: 80px;
     margin-right: 50px;
     /* border: 1px solid black; */
@@ -42,7 +42,7 @@ header{
     float: left;
     /* margin-top: 55px; */
     /* margin-bottom: 50px; */
-    margin: 51.5px;
+    margin: 38px;
     font-weight: bold;
     font-size: 20px;
     transition: all 0.3s ease;

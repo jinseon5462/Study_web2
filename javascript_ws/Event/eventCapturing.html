@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        *{
+        /* *{
             margin: 0px;
             padding: 0px;
             margin: 0 auto;
@@ -30,15 +30,60 @@
             color: white;
             text-align: center;
             line-height: 60px;
+        } */
+        div{
+            border: solid 0.1px black;
         }
+        .post{
+            margin: 0 auto;
+            width: 300px;
+            padding: 10px;
+        }
+
     </style>
 </head>
 <body>
-    <section>
+    <!-- <section>
         <div id="out">
             <p id="in">hello event</p>
         </div>
-    </section>
+    </section> -->
+    <div id="freeboard_main">
+        <div class="post">
+            <div class="wrap">
+                <div id="bno" style="display:none;">11</div>
+                <div class='post_title'>title</div>
+                <div class='post_content'>content</div>
+                <div class='post_bottom'>
+                    <div class='date_writer'>
+                        <div id='date'>date</div>
+                        <div id='writer'>id</div>
+                    </div>
+                    <div class='view_comment'>
+                        <div id='view' title='조회수'>조회수</div>
+                        <div id='comment' title='댓글수'>댓글수</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="post">
+            <div class="wrap">
+                <div id="bno" style="display:none;">12</div>
+                <div class='post_title'>title2</div>
+                <div class='post_content'>content2</div>
+                <div class='post_bottom'>
+                    <div class='date_writer'>
+                        <div id='date'>date2</div>
+                        <div id='writer'>id2</div>
+                    </div>
+                    <div class='view_comment'>
+                        <div id='view' title='조회수'>조회수</div>
+                        <div id='comment' title='댓글수'>댓글수</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <script>
         const pTag = document.querySelector("#in");
         const divTag = document.querySelector("#out");
@@ -48,13 +93,21 @@
         // true 이벤트 캡처링
         // 같은 이벤트 속성을 가지고 있어야 한다.
 
-        pTag.addEventListener('click', f, false);
-        divTag.addEventListener('click', f, false);
-        sectionTag.addEventListener('click', f, false);
+        // pTag.addEventListener('click', f, false);
+        // divTag.addEventListener('click', f, true);
+        // sectionTag.addEventListener('click', f, false);
 
-        function f(){
-            alert(this.tagName);
+        // function f(event){
+        //     alert(this.tagName);
+        //     event.stopPropagation();
+        // }
+        let main = document.querySelector("#freeboard_main");
+        main.addEventListener("click", f);
+        function f(e){
+            console.log(e.target.innerText);
+            console.log(e.currentTarget.innerText);
         }
+        
     </script>
 </body>
 </html>
